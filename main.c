@@ -1,6 +1,7 @@
 #include "push.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <Windows.h>
 
 char resposta[999];
 char vetor[999];
@@ -52,7 +53,7 @@ void MenuPrincipal() {
         aux++;
         printf("Proxima letra: %c. Voce tem 3 segundos para memorizar\n",
                vetor[contador]);
-        sleep(3);
+        Sleep(3000);
         system("cls");
         printf("Digite a sequencia: ");
         scanf("%s", resposta);
@@ -67,7 +68,7 @@ void MenuPrincipal() {
           } else {
             system("cls");
             printf("Parabens %s! +10 pontos!\n", nome.nome);
-            sleep(3);
+            Sleep(3000);
             system("cls");
             pontos += 10;
           }
